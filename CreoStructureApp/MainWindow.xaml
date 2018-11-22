@@ -5,8 +5,57 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CreoStructureApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Axis"
+        Height="600"
+        Width="420"
+        Loaded='Window_Loaded'
+        ResizeMode='NoResize'
+        Topmost='True'>
+
+    <Window.Resources>
+        <Style TargetType='{x:Type Button}'>
+            <Setter Property='Margin'
+                    Value='8' />
+            <Setter Property='Padding'
+                    Value='11' />
+        </Style>
+    </Window.Resources>
+
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height='39*' />
+            <RowDefinition Height='160*' />
+            <RowDefinition Height='160*' />
+            <RowDefinition Height='77*' />
+            <RowDefinition Height='91*' />
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row='0'
+               HorizontalAlignment='Left'
+               FontWeight='Bold'
+               FontSize='16'
+               VerticalContentAlignment='Center'
+               Width='280'
+               Content='Part Surface Structure Dashboard'
+               Foreground='#FF506EBF' />
+
+        <Button x:Name='helpButton'
+                Grid.Row='0'
+                HorizontalAlignment='Right'
+                Width='25'
+                Margin='5,5,10,5'
+                Height='25'
+                Padding='0'
+                Background='{DynamicResource {x:Static SystemColors.ControlLightLightBrushKey}}'
+                BorderBrush='{x:Null}'
+                Foreground='{x:Null}'
+                ToolTip="Show help">
+            <Grid>
+                <Grid.RowDefinitions>
+                </Grid.RowDefinitions>
+                <ContentControl Content="{StaticResource Help}"
+                                Grid.Row='0' />
+            </Grid>
+        </Button>
     </Grid>
 </Window>

@@ -4,6 +4,10 @@
     xmlns:local="clr-namespace:CreoStructureApp"
     StartupUri="MainWindow.xaml">
     <Application.Resources>
-        
+        <ResourceDictionary Source='Buttons.xaml'>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/CreoStructureApp;component/Buttons.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
